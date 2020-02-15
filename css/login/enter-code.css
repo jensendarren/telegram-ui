@@ -1,0 +1,54 @@
+#enterCode {
+    justify-content: center;
+    text-align: center;
+    padding-top: 135px;
+}
+
+#enterCode .login-title {
+    margin-top: 42px;
+}
+
+#enterCode .login-text {
+    max-width: 210px;
+}
+
+.monkey-logo {
+    position: relative;
+    background-image: url('../../assets/monkey/monkey.png');
+    background-size: cover;
+    width: 133px;
+    height: 135px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.monkey-logo.error {
+    background-image: url('../../assets/monkey/monkey2.png');
+    background-size: cover;
+    width: 131px;
+    height: 135px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#enterCode_inputContainer {
+    width: 360px;
+    margin-bottom: 24px;
+}
+
+#enterCode_backButtonContainer {
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    position: relative;
+}
+
+#enterCode_backButton {
+    position: absolute;
+    left: 0;
+    top: -35px;
+}
+
+#enterCode_backButton:after {
+    background-image: url("../../assets/icons/edit_svg.svg");
+}

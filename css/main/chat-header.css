@@ -1,0 +1,50 @@
+.header-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #eee;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-right: 17px;
+}
+
+.header-group {
+    flex-grow: 1;
+}
+
+.header-title {
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    pointer-events: none;
+    margin-bottom: 3px;
+}
+
+.header-text {
+    color: #999899;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.online-text {
+    color: #3b95ed;
+}
+
+#chatMuteButton:after {
+    background-image: url("../../assets/icons/mute_svg.svg");
+}
+
+#chatSearchButton:after {
+    background-image: url("../../assets/icons/search_svg.svg");
+}
+
+#chatMenuButton:after {
+    background-image: url("../../assets/icons/more_svg.svg");
+}

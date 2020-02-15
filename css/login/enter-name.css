@@ -1,0 +1,135 @@
+#enterName {
+    justify-content: center;
+    text-align: center;
+    padding-top: 118px;
+}
+
+#enterName .login-title {
+    margin-top: 34px;
+}
+
+#enterName .login-text {
+    max-width: 180px;
+}
+
+.enter-avatar {
+    position: relative;
+    background: #4ea4f6;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: 160px;
+    height: 160px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.enter-avatar-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    background-image: url("../../assets/icons/cameraadd_svg.svg");
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+#enterName_inputContainer {
+    width: 360px;
+    margin-bottom: 24px;
+}
+
+#enterName_button {
+    width: 100%;
+    margin-top: 24px;
+}
+
+#overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#editPhotoPopup {
+    position: relative;
+    background: white;
+    border-radius: 9px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 70px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+#editPhotoImg {
+    position: relative;
+    width: 360px;
+    height: 360px;
+    border-radius: 5px;
+    background: #ccc;
+    overflow: hidden;
+    cursor: move;
+}
+
+.editPhoto_mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 360px;
+    height: 360px;
+    background-image: url('../../assets/circle.svg');
+    background-size: 490px 490px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .5;
+}
+
+.editPhoto_img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 550px;
+    height: 773px;
+    background-size: 550px 773px;
+}
+
+.editPhoto_title {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+
+#editPhoto_closeButton {
+    position: absolute;
+    left: 9px;
+    top: 4px;
+}
+
+#editPhoto_closeButton:after {
+    background-image: url("../../assets/icons/close_svg.svg");
+}
+
+#editPhoto_okButton {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+#editPhoto_okButton:after {
+    background-image: url("../../assets/icons/check_svg.svg");
+}

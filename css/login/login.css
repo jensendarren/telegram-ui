@@ -1,0 +1,74 @@
+#login {
+    justify-content: center;
+    text-align: center;
+    padding-top: 108px;
+}
+
+.login-logo {
+    background-image: url('../../assets/logo.svg');
+    background-size: cover;
+    width: 160px;
+    height: 160px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-title {
+    margin-top: 44px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.login-text {
+    margin-top: 13px;
+    margin-bottom: 49px;
+    font-size: 16px;
+    line-height: 21px;
+    color: #707579;
+    max-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#login_countryInputContainer {
+    width: 360px;
+    margin-bottom: 24px;
+}
+
+#login_phoneInputContainer {
+    width: 360px;
+    margin-bottom: 27px;
+}
+
+#login_button {
+    width: 100%;
+    margin-top: 47px;
+}
+
+/* COUNTRY SELECT */
+
+.country-flag {
+    position: absolute;
+    top: 13px;
+    left: 15px;
+    width: 24px;
+    height: 17px;
+    font-size: 26px;
+    pointer-events: none;
+}
+
+.country-name {
+    position: absolute;
+    top: 19px;
+    left: 72px;
+    pointer-events: none;
+}
+
+.country-code {
+    position: absolute;
+    top: 19px;
+    right: 16px;
+    color: #767a7e;
+    text-align: right;
+    pointer-events: none;
+}

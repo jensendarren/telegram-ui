@@ -1,0 +1,123 @@
+#main {
+}
+
+#leftSidebar {
+    position: relative;
+    width: 421px;
+    height: 100%;
+    border-right: 1px solid #dadce0;
+    background-color: #fff;
+}
+
+#middle {
+    position: relative;
+    background-color: #e6ebee;
+    flex-grow: 1;
+    height: 100%;
+}
+
+#rightSidebar {
+    position: relative;
+    width: 421px;
+    height: 100%;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-left: 1px solid #dadce0;
+}
+
+/* leftSidebarHeader */
+
+#leftSidebarHeader {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+#menuButton {
+    margin-left: 1px;
+}
+
+#menuButton:after {
+    background-image: url("../../assets/icons/menu_svg.svg");
+}
+
+#searchInputContainer {
+    flex-grow: 1;
+    margin-left: 9px;
+    margin-right: 12px;
+}
+
+#searchInputContainer {
+    position: relative;
+}
+
+#searchInputContainer input {
+    width: 100%;
+    border: none;
+    border-radius: 22px;
+    height: 44px;
+    background: #f4f4f5;
+    font-size: 16px;
+    padding-top: 0;
+    padding-bottom: 2px;
+    padding-left: 42px;
+    padding-right: 14px;
+}
+
+#searchInputContainer:hover input {
+}
+
+#searchInputContainer input:focus {
+    background: white;
+    border: 2px solid #4ea4f6;
+    padding-left: 40px;
+    padding-right: 13px;
+}
+
+#searchInputContainer:after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 12px;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../assets/icons/search_svg.svg');
+}
+
+/* dialogsList */
+
+#dialogsList {
+    width: 100%;
+    height: calc(100% - 61px);
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* chat */
+
+#chatHeader {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 61px;
+    background-color: white;
+    border-bottom: 1px solid #dadce0;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+
+#chatContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 717px;
+    margin-top: 61px;
+    height: calc(100% - 61px);
+}

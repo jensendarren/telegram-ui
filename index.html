@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Telegram</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="icon" href="favicon.ico">
+
+    <link rel='stylesheet' href="css/roboto.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/controls/button.css">
+    <link rel="stylesheet" href="css/controls/input.css">
+    <link rel="stylesheet" href="css/controls/checkbox.css">
+    <link rel="stylesheet" href="css/login/login.css">
+    <link rel="stylesheet" href="css/login/enter-code.css">
+    <link rel="stylesheet" href="css/login/enter-password.css">
+    <link rel="stylesheet" href="css/login/enter-name.css">
+    <link rel="stylesheet" href="css/main/main.css">
+    <link rel="stylesheet" href="css/main/chat-list.css">
+    <link rel="stylesheet" href="css/main/chat-header.css">
+    <link rel="stylesheet" href="css/main/message.css">
+</head>
+<body class="">
+
+<!-- LOGIN -->
+
+<div id="login" class="screen" style="display: none">
+    <div>
+        <div class="login-logo"></div>
+
+        <div class="login-title">
+            Sign in to Telegram
+        </div>
+
+        <div class="login-text">
+            Please confirm your country and enter your phone number.
+        </div>
+
+        <div id="login_countryInputContainer" class="input-container select-container">
+            <input id="login_countryInput" type="text" placeholder="Country">
+            <label for="login_countryInput">Country</label>
+            <div class="select-items"></div>
+        </div>
+
+        <div id="login_phoneInputContainer" class="input-container">
+            <input id="login_phoneInput" type="tel" placeholder="Phone Number">
+            <label for="login_phoneInput">Phone Number</label>
+        </div>
+
+        <label class="check-container">Keep me signed in
+            <input id="login_checkbox" type="checkbox" checked="checked">
+            <span class="checkmark"></span>
+        </label>
+
+        <a id="login_button" class="btn btn-primary">Next</a>
+    </div>
+</div>
+
+<!-- ENTER CODE -->
+
+<div id="enterCode" class="screen" style="display: none">
+    <div>
+        <div class="monkey-logo"><picture>
+            <source media="(min-width: )" srcset="">
+            <img src="" alt="">
+        </picture>
+            <tgs-player
+                    src="assets/monkey/TwoFactorSetupMonkeyIdle.tgs" background="#fff" speed="1"
+                    style="width: 170px; height: 170px; position: absolute; top: -18px; left: -20px" loop autoplay>
+            </tgs-player>
+        </div>
+
+        <div class="login-title">
+            <span id="enterCode_phone">+33 1 23 45 67 89</span>
+
+            <div idx="enterCode_backButtonContainer">
+                <a id="enterCode_backButton" class="btn btn-light btn-circle"></a>
+            </div>
+        </div>
+
+        <div class="login-text">
+            We have sent you an SMS with the code.
+        </div>
+
+        <div id="enterCode_inputContainer" class="input-container">
+            <input id="enterCode_input" type="text" placeholder="Code" maxlength="5">
+            <label for="enterCode_input">Code</label>
+        </div>
+    </div>
+</div>
+
+<!-- ENTER PASSWORD -->
+
+<div id="enterPassword" class="screen" style="display: none">
+    <div>
+        <div class="monkey-logo-password">
+            <tgs-player
+                    src="assets/monkey/TwoFactorSetupMonkeyClose.tgs" background="#fff" speed="1"
+                    style="width: 170px; height: 170px; position: absolute; top: -18px; left: -20px" loop autoplay>
+            </tgs-player>
+        </div>
+
+        <div class="login-title">
+            Enter a Password
+        </div>
+
+        <div class="login-text">
+            Your account is protected with an additional password.
+        </div>
+
+        <div id="enterPassword_inputContainer" class="input-container">
+            <input id="enterPassword_input" type="password" placeholder="Password">
+            <label for="enterPassword_input">Password</label>
+
+            <a id="enterPassword_showButton" class="btn btn-circle"></a>
+        </div>
+
+        <a id="enterPassword_button" class="btn btn-primary">Next</a>
+    </div>
+</div>
+
+<!-- ENTER NAME -->
+
+<div id="enterName" class="screen" style="display: none">
+    <div>
+        <label for="enterName_fileInput">
+            <input id="enterName_fileInput" type='file' accept="image/*" style="display: none">
+            <div class="enter-avatar">
+                <div class="enter-avatar-icon"></div>
+            </div>
+        </label>
+
+        <div class="login-title">
+            Your Name
+        </div>
+
+        <div class="login-text">
+            Enter your name and add a profile picture.
+        </div>
+
+        <div id="enterName_inputContainer" class="input-container">
+            <input id="enterName_input" type="text" placeholder="Name">
+            <label for="enterName_input">Name</label>
+        </div>
+
+        <div id="enterName_lastNameInputContainer" class="input-container">
+            <input id="enterName_lastNameInput" type="text" placeholder="Last Name (optional)">
+            <label for="enterName_lastNameInput">Last Name (optional)</label>
+        </div>
+
+        <a id="enterName_button" class="btn btn-primary">Start Messaging</a>
+
+        <div id="overlay" style="display: none">
+            <div id="editPhotoPopup">
+                <a id="editPhoto_closeButton" class="btn btn-circle"></a>
+                <div class="editPhoto_title">Drag to Reposition</div>
+                <div id="editPhotoImg">
+                    <div class="editPhoto_img"></div>
+                    <div class="editPhoto_mask"></div>
+                </div>
+                <a id="editPhoto_okButton" class="btn btn-primary btn-circle"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- MAIN -->
+
+<div id="main" class="screen">
+    <div id="leftSidebar">
+        <div id="leftSidebarHeader" style="display: none">
+            <a id="menuButton" class="btn btn-light btn-circle"></a>
+
+            <div id="searchInputContainer">
+                <input id="searchInput" type="text" placeholder="Search" aria-label="Search">
+            </div>
+        </div>
+
+        <div id="dialogsList"></div>
+
+        <div id="leftLoading" class="loading"></div>
+    </div>
+
+    <div id="middle">
+        <div id="chatHeader" style="display: none">
+            <div class="header-avatar"></div>
+            <div class="header-group">
+                <div class="header-title"></div>
+                <div class="header-text"></div>
+            </div>
+
+            <a id="chatSubscribeButton" class="btn btn-primary btn-small" style="display: none">Subscribe</a>
+            <a id="chatMuteButton" class="btn btn-light btn-circle"></a>
+            <a id="chatSearchButton" class="btn btn-light btn-circle"></a>
+            <a id="chatMenuButton" class="btn btn-light btn-circle"></a>
+        </div>
+
+        <div id="chatContainer">
+            <div id="messagesList">
+            </div>
+        </div>
+
+        <div id="middleLoading" class="loading" style="display: none"></div>
+    </div>
+
+    <div id="rightSidebar" style="display: none"></div>
+</div>
+
+<script src="libs/tgs-player-0.2.0.min.js"></script>
+<script src="libs/require-2.3.6.min.js"></script>
+
+<script src="js/Utils.js"></script>
+<script src="js/controls/MaterialButton.js"></script>
+<script src="js/controls/Button.js"></script>
+<script src="js/controls/Input.js"></script>
+<script src="js/controls/Select.js"></script>
+
+<script src="js/PhoneCodes.js"></script>
+<script src="js/login/Login.js"></script>
+<script src="js/login/EnterCode.js"></script>
+<script src="js/login/EnterName.js"></script>
+<script src="js/login/EnterPassword.js"></script>
+<script src="js/main/dialogs/DialogsListItem.js"></script>
+<script src="js/main/dialogs/DialogsList.js"></script>
+<script src="js/main/MessagesList.js"></script>
+<script src="js/main/message/MessageTextFormat.js"></script>
+<script src="js/main/message/MessageContent.js"></script>
+<script src="js/main/message/Message.js"></script>
+<script src="js/MainView.js"></script>
+<script src="js/Controller.js"></script>
+<script src="js/Api.js"></script>
+<script src="js/Storage.js"></script>
+<script src="js/FileManager.js"></script>
+<script src="js/Main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,123 @@
+.input-container {
+    position: relative;
+}
+
+.input-container input {
+    width: 100%;
+    border: 1px solid #dadce0;
+    border-radius: 10px;
+    height: 54px;
+    background: none;
+    font-size: 16px;
+    padding-top: 0;
+    padding-bottom: 2px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.input-container:hover input {
+    border: 1px solid #000;
+}
+
+.input-container input:focus {
+    border: 2px solid #4ea4f6;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+.input-container.error input, .input-container.error input:focus {
+    border: 2px solid #e53935;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+.input-container ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #abb4bc;
+    opacity: 1; /* Firefox */
+}
+
+.input-container :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #abb4bc;
+}
+
+.input-container ::-ms-input-placeholder { /* Microsoft Edge */
+    color: #abb4bc;
+}
+
+.input-container label {
+    position: absolute;
+    left: 12px;
+    top: -5px;
+    font-size: 12px;
+    font-weight: normal;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: white;
+    color: #7a7a7a;
+}
+
+.input-container:hover label {
+    color: #000;
+}
+
+.input-container input:focus ~ label {
+    font-weight: bold;
+    color: #4ea4f6;
+}
+
+.input-container.error label, .input-container.error input:focus ~ label {
+    font-weight: bold;
+    color: #e53935;
+}
+
+/* SELECT */
+
+.select-container:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 15px;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../assets/icons/down_svg.svg');
+}
+
+.select-container.open:after {
+    background-image: url('../../assets/icons/up_svg.svg');
+}
+
+.select-items {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 62px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    padding-top: 8px;
+
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+
+    height: 200px;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.select-container.open .select-items {
+    display: block;
+}
+
+.select-item {
+    position: relative;
+    padding-left: 15px;
+    padding-right: 17px;
+    height: 56px;
+}
+
+.select-item:hover {
+    background-color: #f4f4f5;
+}
